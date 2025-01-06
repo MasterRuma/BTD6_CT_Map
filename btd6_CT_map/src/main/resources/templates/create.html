@@ -13,2116 +13,2225 @@
       crossorigin="anonymous"
     ></script>
     <title>Create BTD6 CT Map</title>
-    <script>
-      let toggle = false;
-
-      function changeColor(color) {
-        document.getElementById("changeColor").style.color = color;
-        document.getElementById("changeColor").setAttribute("value", color);
-      }
-
-      function show() {
-        if (!toggle) {
-          let color = document.getElementsByName("color");
-          for (let i = 0; i < color.length; i++) {
-            document.getElementsByName("color")[i].hidden = false;
-          }
-          toggle = true;
-        } else if (toggle) {
-          let color = document.getElementsByName("color");
-          for (let i = 0; i < color.length; i++) {
-            document.getElementsByName("color")[i].hidden = true;
-          }
-          toggle = false;
-        }
-      }
-
-      function colorFill(id) {
-        document
-          .getElementById(id)
-          .setAttribute(
-            "fill",
-            document.getElementById("changeColor").style.color
-          );
-        document
-          .getElementById(id)
-          .setAttribute(
-            "data-value",
-            document.getElementById("changeColor").getAttribute("value")
-          );
-      }
-    </script>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      footer {
-        background-color: grey;
-        width: 100%;
-        height: 4em;
-        display: block;
-        align-content: center;
-        bottom: 0px;
-        position: fixed;
-      }
-      header {
-        margin-bottom: 2em;
-        width: 100%;
-        text-align: right;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
   </head>
 
   <body>
     <form th:action="@{/create}" method="post">
       <header>
         <button>제출하기</button>
+        <input type="hidden" value="#FFFFFF" name="aab" />
+        <input type="hidden" value="#FFFFFF" name="aac" />
+        <input type="hidden" value="#FFFFFF" name="aad" />
+        <input type="hidden" value="#FFFFFF" name="aae" />
+        <input type="hidden" value="#FFFFFF" name="aaf" />
+        <input type="hidden" value="#FFFFFF" name="aag" />
+        <input type="hidden" value="#FFFFFF" name="aba" />
+        <input type="hidden" value="#FFFFFF" name="abb" />
+        <input type="hidden" value="#FFFFFF" name="abc" />
+        <input type="hidden" value="#FFFFFF" name="abd" />
+        <input type="hidden" value="#FFFFFF" name="abe" />
+        <input type="hidden" value="#FFFFFF" name="abf" />
+        <input type="hidden" value="#FFFFFF" name="aca" />
+        <input type="hidden" value="#FFFFFF" name="acb" />
+        <input type="hidden" value="#FFFFFF" name="acc" />
+        <input type="hidden" value="#FFFFFF" name="acd" />
+        <input type="hidden" value="#FFFFFF" name="ace" />
+        <input type="hidden" value="#FFFFFF" name="ada" />
+        <input type="hidden" value="#FFFFFF" name="adb" />
+        <input type="hidden" value="#FFFFFF" name="adc" />
+        <input type="hidden" value="#FFFFFF" name="add" />
+        <input type="hidden" value="#FFFFFF" name="aea" />
+        <input type="hidden" value="#FFFFFF" name="aeb" />
+        <input type="hidden" value="#FFFFFF" name="aec" />
+        <input type="hidden" value="#FFFFFF" name="afa" />
+        <input type="hidden" value="#FFFFFF" name="afb" />
+        <input type="hidden" value="#FFFFFF" name="aga" />
+        <input type="hidden" value="#FFFFFF" name="bab" />
+        <input type="hidden" value="#FFFFFF" name="bac" />
+        <input type="hidden" value="#FFFFFF" name="bad" />
+        <input type="hidden" value="#FFFFFF" name="bae" />
+        <input type="hidden" value="#FFFFFF" name="baf" />
+        <input type="hidden" value="#FFFFFF" name="bag" />
+        <input type="hidden" value="#FFFFFF" name="bba" />
+        <input type="hidden" value="#FFFFFF" name="bbb" />
+        <input type="hidden" value="#FFFFFF" name="bbc" />
+        <input type="hidden" value="#FFFFFF" name="bbd" />
+        <input type="hidden" value="#FFFFFF" name="bbe" />
+        <input type="hidden" value="#FFFFFF" name="bbf" />
+        <input type="hidden" value="#FFFFFF" name="bca" />
+        <input type="hidden" value="#FFFFFF" name="bcb" />
+        <input type="hidden" value="#FFFFFF" name="bcc" />
+        <input type="hidden" value="#FFFFFF" name="bcd" />
+        <input type="hidden" value="#FFFFFF" name="bce" />
+        <input type="hidden" value="#FFFFFF" name="bda" />
+        <input type="hidden" value="#FFFFFF" name="bdb" />
+        <input type="hidden" value="#FFFFFF" name="bdc" />
+        <input type="hidden" value="#FFFFFF" name="bdd" />
+        <input type="hidden" value="#FFFFFF" name="bea" />
+        <input type="hidden" value="#FFFFFF" name="beb" />
+        <input type="hidden" value="#FFFFFF" name="bec" />
+        <input type="hidden" value="#FFFFFF" name="bfa" />
+        <input type="hidden" value="#FFFFFF" name="bfb" />
+        <input type="hidden" value="#FFFFFF" name="bga" />
+        <input type="hidden" value="#FFFFFF" name="cab" />
+        <input type="hidden" value="#FFFFFF" name="cac" />
+        <input type="hidden" value="#FFFFFF" name="cad" />
+        <input type="hidden" value="#FFFFFF" name="cae" />
+        <input type="hidden" value="#FFFFFF" name="caf" />
+        <input type="hidden" value="#FFFFFF" name="cag" />
+        <input type="hidden" value="#FFFFFF" name="cba" />
+        <input type="hidden" value="#FFFFFF" name="cbb" />
+        <input type="hidden" value="#FFFFFF" name="cbc" />
+        <input type="hidden" value="#FFFFFF" name="cbd" />
+        <input type="hidden" value="#FFFFFF" name="cbe" />
+        <input type="hidden" value="#FFFFFF" name="cbf" />
+        <input type="hidden" value="#FFFFFF" name="cca" />
+        <input type="hidden" value="#FFFFFF" name="ccb" />
+        <input type="hidden" value="#FFFFFF" name="ccc" />
+        <input type="hidden" value="#FFFFFF" name="ccd" />
+        <input type="hidden" value="#FFFFFF" name="cce" />
+        <input type="hidden" value="#FFFFFF" name="cda" />
+        <input type="hidden" value="#FFFFFF" name="cdb" />
+        <input type="hidden" value="#FFFFFF" name="cdc" />
+        <input type="hidden" value="#FFFFFF" name="cdd" />
+        <input type="hidden" value="#FFFFFF" name="cea" />
+        <input type="hidden" value="#FFFFFF" name="ceb" />
+        <input type="hidden" value="#FFFFFF" name="cec" />
+        <input type="hidden" value="#FFFFFF" name="cfa" />
+        <input type="hidden" value="#FFFFFF" name="cfb" />
+        <input type="hidden" value="#FFFFFF" name="cga" />
+        <input type="hidden" value="#FFFFFF" name="dab" />
+        <input type="hidden" value="#FFFFFF" name="dac" />
+        <input type="hidden" value="#FFFFFF" name="dad" />
+        <input type="hidden" value="#FFFFFF" name="dae" />
+        <input type="hidden" value="#FFFFFF" name="daf" />
+        <input type="hidden" value="#FFFFFF" name="dag" />
+        <input type="hidden" value="#FFFFFF" name="dba" />
+        <input type="hidden" value="#FFFFFF" name="dbb" />
+        <input type="hidden" value="#FFFFFF" name="dbc" />
+        <input type="hidden" value="#FFFFFF" name="dbd" />
+        <input type="hidden" value="#FFFFFF" name="dbe" />
+        <input type="hidden" value="#FFFFFF" name="dbf" />
+        <input type="hidden" value="#FFFFFF" name="dca" />
+        <input type="hidden" value="#FFFFFF" name="dcb" />
+        <input type="hidden" value="#FFFFFF" name="dcc" />
+        <input type="hidden" value="#FFFFFF" name="dcd" />
+        <input type="hidden" value="#FFFFFF" name="dce" />
+        <input type="hidden" value="#FFFFFF" name="dda" />
+        <input type="hidden" value="#FFFFFF" name="ddb" />
+        <input type="hidden" value="#FFFFFF" name="ddc" />
+        <input type="hidden" value="#FFFFFF" name="ddd" />
+        <input type="hidden" value="#FFFFFF" name="dea" />
+        <input type="hidden" value="#FFFFFF" name="deb" />
+        <input type="hidden" value="#FFFFFF" name="dec" />
+        <input type="hidden" value="#FFFFFF" name="dfa" />
+        <input type="hidden" value="#FFFFFF" name="dfb" />
+        <input type="hidden" value="#FFFFFF" name="dga" />
+        <input type="hidden" value="#FFFFFF" name="eab" />
+        <input type="hidden" value="#FFFFFF" name="eac" />
+        <input type="hidden" value="#FFFFFF" name="ead" />
+        <input type="hidden" value="#FFFFFF" name="eae" />
+        <input type="hidden" value="#FFFFFF" name="eaf" />
+        <input type="hidden" value="#FFFFFF" name="eag" />
+        <input type="hidden" value="#FFFFFF" name="eba" />
+        <input type="hidden" value="#FFFFFF" name="ebb" />
+        <input type="hidden" value="#FFFFFF" name="ebc" />
+        <input type="hidden" value="#FFFFFF" name="ebd" />
+        <input type="hidden" value="#FFFFFF" name="ebe" />
+        <input type="hidden" value="#FFFFFF" name="ebf" />
+        <input type="hidden" value="#FFFFFF" name="eca" />
+        <input type="hidden" value="#FFFFFF" name="ecb" />
+        <input type="hidden" value="#FFFFFF" name="ecc" />
+        <input type="hidden" value="#FFFFFF" name="ecd" />
+        <input type="hidden" value="#FFFFFF" name="ece" />
+        <input type="hidden" value="#FFFFFF" name="eda" />
+        <input type="hidden" value="#FFFFFF" name="edb" />
+        <input type="hidden" value="#FFFFFF" name="edc" />
+        <input type="hidden" value="#FFFFFF" name="edd" />
+        <input type="hidden" value="#FFFFFF" name="eea" />
+        <input type="hidden" value="#FFFFFF" name="eeb" />
+        <input type="hidden" value="#FFFFFF" name="eec" />
+        <input type="hidden" value="#FFFFFF" name="efa" />
+        <input type="hidden" value="#FFFFFF" name="efb" />
+        <input type="hidden" value="#FFFFFF" name="ega" />
+        <input type="hidden" value="#FFFFFF" name="fab" />
+        <input type="hidden" value="#FFFFFF" name="fac" />
+        <input type="hidden" value="#FFFFFF" name="fad" />
+        <input type="hidden" value="#FFFFFF" name="fae" />
+        <input type="hidden" value="#FFFFFF" name="faf" />
+        <input type="hidden" value="#FFFFFF" name="fah" />
+        <input type="hidden" value="#FFFFFF" name="fba" />
+        <input type="hidden" value="#FFFFFF" name="fbb" />
+        <input type="hidden" value="#FFFFFF" name="fbc" />
+        <input type="hidden" value="#FFFFFF" name="fbd" />
+        <input type="hidden" value="#FFFFFF" name="fbe" />
+        <input type="hidden" value="#FFFFFF" name="fbf" />
+        <input type="hidden" value="#FFFFFF" name="fca" />
+        <input type="hidden" value="#FFFFFF" name="fcb" />
+        <input type="hidden" value="#FFFFFF" name="fcc" />
+        <input type="hidden" value="#FFFFFF" name="fcd" />
+        <input type="hidden" value="#FFFFFF" name="fce" />
+        <input type="hidden" value="#FFFFFF" name="fda" />
+        <input type="hidden" value="#FFFFFF" name="fdb" />
+        <input type="hidden" value="#FFFFFF" name="fdc" />
+        <input type="hidden" value="#FFFFFF" name="fdd" />
+        <input type="hidden" value="#FFFFFF" name="fea" />
+        <input type="hidden" value="#FFFFFF" name="feb" />
+        <input type="hidden" value="#FFFFFF" name="fec" />
+        <input type="hidden" value="#FFFFFF" name="ffa" />
+        <input type="hidden" value="#FFFFFF" name="ffb" />
+        <input type="hidden" value="#FFFFFF" name="fga" />
+        <input type="hidden" value="#FFFFFF" name="mrx" />
+        <input type="hidden" value="#FFFFFF" name="o1" />
+        <input type="hidden" value="#FFFFFF" name="o2" />
+        <input type="hidden" value="#FFFFFF" name="o3" />
+        <input type="hidden" value="#FFFFFF" name="o4" />
+        <input type="hidden" value="#FFFFFF" name="o5" />
+        <input type="hidden" value="#FFFFFF" name="o6" />
       </header>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="701"
-        height="764"
-        xml:space="preserve"
-        overflow="hidden"
-      >
-        <g transform="translate(-1693 -514)">
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 517.5)"
-            id="o1"
-            name="o1"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 567.5)"
-            id="AAB"
-            name="AAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 618.5)"
-            id="AAC"
-            name="AAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 668.5)"
-            id="AAD"
-            name="AAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 719.5)"
-            id="AAE"
-            name="AAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 769.5)"
-            id="AAF"
-            name="AAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 820.5)"
-            id="AAG"
-            name="AAG"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 870.5)"
-            id="MRX"
-            name="MRX"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 921.5)"
-            id="DAG"
-            name="DAG"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 971.5)"
-            id="DAF"
-            name="DAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 1022.5)"
-            id="DAE"
-            name="DAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 1072.5)"
-            id="DAD"
-            name="DAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 1123.5)"
-            id="DAC"
-            name="DAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 45.2502 0 58.0001 25.4999 45.2502 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 1173.5)"
-            id="DAB"
-            name="DAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2072.5 1224.5)"
-            id="o4"
-            name="o4"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 542.5)"
-            id="ABA"
-            name="ABA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 593.5)"
-            id="AAB"
-            name="AAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 643.5)"
-            id="ABC"
-            name="ABC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 694.5)"
-            id="ABD"
-            name="ABD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 744.5)"
-            id="ABE"
-            name="ABE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 795.5)"
-            id="ABF"
-            name="ABF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 845.5)"
-            id="BAG"
-            name="BAG"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 896.5)"
-            id="CAG"
-            name="CAG"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 946.5)"
-            id="CBF"
-            name="CBF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 997.5)"
-            id="DCE"
-            name="DCE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 1047.5)"
-            id="DCD"
-            name="DCD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 1098.5)"
-            id="DCC"
-            name="DCC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 1148.5)"
-            id="DCB"
-            name="DCB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2027.5 1199.5)"
-            id="DCA"
-            name="DCA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 542.5)"
-            id="ACA"
-            name="ACA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 593.5)"
-            id="ACB"
-            name="ACB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 643.5)"
-            id="ACC"
-            name="ACC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 694.5)"
-            id="ACD"
-            name="ACD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 744.5)"
-            id="ACE"
-            name="ACE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 795.5)"
-            id="FBF"
-            name="FBF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 845.5)"
-            id="FAH"
-            name="FAH"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 896.5)"
-            id="EAG"
-            name="EAG"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 946.5)"
-            id="DBF"
-            name="DBF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 997.5)"
-            id="DBE"
-            name="DBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 1047.5)"
-            id="DBD"
-            name="DBD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 1098.5)"
-            id="DBC"
-            name="DBC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 1148.5)"
-            id="DBB"
-            name="DBB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2118.5 1199.5)"
-            id="DBA"
-            name="DBA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 593.5)"
-            id="AFA"
-            name="AFA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 643.5)"
-            id="AFB"
-            name="AFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 694.5)"
-            id="BEC"
-            name="BEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 744.5)"
-            id="BCD"
-            name="BCD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 795.5)"
-            id="BAE"
-            name="BAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 845.5)"
-            id="BBE"
-            name="BBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 896.5)"
-            id="CCE"
-            name="CCE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 946.5)"
-            id="CAE"
-            name="CAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 997.5)"
-            id="CBD"
-            name="CBD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 1047.5)"
-            id="CDC"
-            name="CDC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 1098.5)"
-            id="CFB"
-            name="CFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1936.5 1148.5)"
-            id="DGA"
-            name="DGA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 618.5)"
-            id="BGA"
-            name="BGA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5
-        49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5
-        669.5)"
-            id="BEB"
-            name="BEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 719.5)"
-            id="BCC"
-            name="BCC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 770.5)"
-            id="BAD"
-            name="BAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 820.5)"
-            id="BBD"
-            name="BBD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 871.5)"
-            id="BDD"
-            name="BDD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 921.5)"
-            id="CCD"
-            name="CCD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 972.5)"
-            id="CAD"
-            name="CAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 1022.5)"
-            id="CBC"
-            name="CBC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 1073.5)"
-            id="CDB"
-            name="CDB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1891.5 1123.5)"
-            id="CFA"
-            name="CFA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 567.5)"
-            id="ADA"
-            name="ADA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 618.5)"
-            id="ADB"
-            name="ADB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 669.5)"
-            id="ADC"
-            name="ADC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 719.5)"
-            id="ADD"
-            name="ADD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 770.5)"
-            id="BCE"
-            name="BCE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 820.5)"
-            id="BAF"
-            name="BAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 871.5)"
-            id="BBF"
-            name="BBF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 921.5)"
-            id="CAF"
-            name="CAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 972.5)"
-            id="CBE"
-            name="CBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 1022.5)"
-            id="CDD"
-            name="CDD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 1073.5)"
-            id="DEC"
-            name="DEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 1123.5)"
-            id="DEB"
-            name="DEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1982.5 1174.5)"
-            id="DEA"
-            name="DEA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 593.5)"
-            id="AGA"
-            name="AGA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 643.5)"
-            id="FFB"
-            name="FFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 694.5)"
-            id="FDC"
-            name="FDC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 744.5)"
-            id="FBD"
-            name="FBD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 795.5)"
-            id="FAE"
-            name="FAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 845.5)"
-            id="FCE"
-            name="FCE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 896.5)"
-            id="EBE"
-            name="EBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 946.5)"
-            id="EAE"
-            name="EAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 997.5)"
-            id="ECD"
-            name="ECD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 1047.5)"
-            id="EEC"
-            name="EEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 1098.5)"
-            id="DFB"
-            name="DFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2208.5 1148.5)"
-            id="DFA"
-            name="DFA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 568.5)"
-            id="AEA"
-            name="AEA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 618.5)"
-            id="AEB"
-            name="AEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 669.5)"
-            id="AEC"
-            name="AEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 719.5)"
-            id="FDD"
-            name="FDD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 770.5)"
-            id="FBE"
-            name="FBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 820.5)"
-            id="FAF"
-            name="FAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 871.5)"
-            id="EBE"
-            name="EBE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 921.5)"
-            id="EAF"
-            name="EAF"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 972.5)"
-            id="ECE"
-            name="ECE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 1022.5)"
-            id="DDD"
-            name="DDD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 1073.5)"
-            id="DDC"
-            name="DDC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 1123.5)"
-            id="DDB"
-            name="DDB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2163.5 1174.5)"
-            id="DDA"
-            name="DDA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 618.5)"
-            id="FFA"
-            name="FFA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 669.5)"
-            id="FDB"
-            name="FDB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 719.5)"
-            id="FBC"
-            name="FBC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 770.5)"
-            id="FAD"
-            name="FAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 820.5)"
-            id="FCD"
-            name="FCD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 871.5)"
-            id="EDD"
-            name="EDD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 921.5)"
-            id="EBD"
-            name="EBD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 972.5)"
-            id="EAD"
-            name="EAD"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 1022.5)"
-            id="ECC"
-            name="ECC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 1073.5)"
-            id="EEB"
-            name="EEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2253.5 1123.5)"
-            id="EGA"
-            name="EGA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 668.5)"
-            id="BCA"
-            name="BCA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 719.5)"
-            id="BAB"
-            name="BAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 769.5)"
-            id="BBB"
-            name="BBB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 820.5)"
-            id="BDB"
-            name="BDB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 870.5)"
-            id="BFB"
-            name="BFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 921.5)"
-            id="CEB"
-            name="CEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.5 12.75 0 45.2502 0 58.0001 25.5 45.2502 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 971.5)"
-            id="CCB"
-            name="CCB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 1022.5)"
-            id="CAB"
-            name="CAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 45.2502 0 58.0001 25.4999 45.2502 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1800.5 1072.5)"
-            id="CBA"
-            name="CBA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 694.5)"
-            id="o6"
-            name="o6"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 744.5)"
-            id="BBA"
-            name="BBA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 795.5)"
-            id="BDA"
-            name="BDA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 845.5)"
-            id="BFA"
-            name="BFA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 896.5)"
-            id="CGA"
-            name="CGA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 946.5)"
-            id="CEA"
-            name="CEA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 997.5)"
-            id="CCA"
-            name="CCA"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1755.5 1047.5)"
-            id="o5"
-            name="o5"
-            onclick="changeFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 643.5)"
-            id="BAE"
-            name="BAE"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 694.5)"
-            id="BCB"
-            name="BCB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 744.5)"
-            id="BAC"
-            name="BAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 795.5)"
-            id="BBC"
-            name="BBC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 845.5)"
-            id="BDC"
-            name="BDC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 896.5)"
-            id="CEC"
-            name="CEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 946.5)"
-            id="CCC"
-            name="CCC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 997.5)"
-            id="CAC"
-            name="CAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 1047.5)"
-            id="CBB"
-            name="CBB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 1846.5 1098.5)"
-            id="CDA"
-            name="CDA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 669.5)"
-            id="FBA"
-            name="FBA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 719.5)"
-            id="FAB"
-            name="FAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 770.5)"
-            id="FCB"
-            name="FCB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 820.5)"
-            id="FEB"
-            name="FEB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 871.5)"
-            id="EFB"
-            name="EFB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 921.5)"
-            id="EDB"
-            name="EDB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 972.5)"
-            id="EBB"
-            name="EBB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 1022.5)"
-            id="EAB"
-            name="EAB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2344.5 1073.5)"
-            id="ECA"
-            name="ECA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 643.5)"
-            id="FDA"
-            name="FDA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 694.5)"
-            id="FBB"
-            name="FBB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 744.5)"
-            id="FAC"
-            name="FAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 795.5)"
-            id="FCC"
-            name="FCC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 845.5)"
-            id="FEC"
-            name="FEC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 896.5)"
-            id="EDC"
-            name="EDC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9998 12.75 50.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 946.5)"
-            id="EBC"
-            name="EBC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 997.5)"
-            id="EAC"
-            name="EAC"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9998 12.75 50.9998Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 1047.5)"
-            id="ECB"
-            name="ECB"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2299.5 1098.5)"
-            id="EEA"
-            name="EEA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 694.5)"
-            id="o2"
-            name="o2"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 744.5)"
-            id="FCA"
-            name="FCA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 795.5)"
-            id="FEA"
-            name="FEA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 845.5)"
-            id="FGA"
-            name="FGA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 896.5)"
-            id="EFA"
-            name="EFA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 946.5)"
-            id="EDA"
-            name="EDA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 997.5)"
-            id="EBA"
-            name="EBA"
-            onclick="colorFill(this.id)"
-          />
-          <path
-            d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
-            stroke="#000000"
-            stroke-width="6.875"
-            stroke-miterlimit="8"
-            fill="#FFFFFF"
-            fill-rule="evenodd"
-            transform="matrix(-1 0 0 1 2389.5 1047.5)"
-            id="o3"
-            name="o3"
-            onclick="colorFill(this.id)"
-          />
-        </g>
-      </svg>
     </form>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="701"
+      height="764"
+      xml:space="preserve"
+      overflow="hidden"
+    >
+      <g transform="translate(-1693 -514)">
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 517.5)"
+          id="o1"
+          name="o1"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 567.5)"
+          id="aab"
+          name="aab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 618.5)"
+          id="aac"
+          name="aac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 668.5)"
+          id="aad"
+          name="aad"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 719.5)"
+          id="aae"
+          name="aae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 769.5)"
+          id="aaf"
+          name="aaf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 820.5)"
+          id="aag"
+          name="aag"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 870.5)"
+          id="mrx"
+          name="mrx"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 921.5)"
+          id="dag"
+          name="dag"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 971.5)"
+          id="daf"
+          name="daf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 1022.5)"
+          id="dae"
+          name="dae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 1072.5)"
+          id="dad"
+          name="dad"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 1123.5)"
+          id="dac"
+          name="dac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 45.2502 0 58.0001 25.4999 45.2502 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 1173.5)"
+          id="dab"
+          name="dab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2072.5 1224.5)"
+          id="o4"
+          name="o4"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 542.5)"
+          id="aba"
+          name="aba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 593.5)"
+          id="abb"
+          name="abb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 643.5)"
+          id="abc"
+          name="abc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 694.5)"
+          id="abd"
+          name="abd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 744.5)"
+          id="abe"
+          name="abe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 795.5)"
+          id="abf"
+          name="abf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 845.5)"
+          id="bag"
+          name="bag"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 896.5)"
+          id="cag"
+          name="cag"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 946.5)"
+          id="cbf"
+          name="cbf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 997.5)"
+          id="dce"
+          name="dce"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 1047.5)"
+          id="dcd"
+          name="dcd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 1098.5)"
+          id="dcc"
+          name="dcc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 1148.5)"
+          id="dcb"
+          name="dcb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2027.5 1199.5)"
+          id="dca"
+          name="dca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 542.5)"
+          id="aca"
+          name="aca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 593.5)"
+          id="acb"
+          name="acb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 643.5)"
+          id="acc"
+          name="acc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 694.5)"
+          id="acd"
+          name="acd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 744.5)"
+          id="ace"
+          name="ace"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 795.5)"
+          id="fbf"
+          name="fbf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 845.5)"
+          id="fah"
+          name="fah"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 896.5)"
+          id="eag"
+          name="eag"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 946.5)"
+          id="dbf"
+          name="dbf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 997.5)"
+          id="dbe"
+          name="dbe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 1047.5)"
+          id="dbd"
+          name="dbd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 1098.5)"
+          id="dbc"
+          name="dbc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 1148.5)"
+          id="dbb"
+          name="dbb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2118.5 1199.5)"
+          id="dba"
+          name="dba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 593.5)"
+          id="afa"
+          name="afa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 643.5)"
+          id="afb"
+          name="afb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 694.5)"
+          id="bec"
+          name="bec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 744.5)"
+          id="bcd"
+          name="bcd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 795.5)"
+          id="bae"
+          name="bae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 845.5)"
+          id="bbe"
+          name="bbe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 896.5)"
+          id="cce"
+          name="cce"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 946.5)"
+          id="cae"
+          name="cae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 997.5)"
+          id="cbd"
+          name="cbd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 1047.5)"
+          id="cdc"
+          name="cdc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 1098.5)"
+          id="cfb"
+          name="cfb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1936.5 1148.5)"
+          id="dga"
+          name="dga"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 618.5)"
+          id="bga"
+          name="bga"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 669.5)"
+          id="beb"
+          name="beb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 719.5)"
+          id="bcc"
+          name="bcc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 770.5)"
+          id="bad"
+          name="bad"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 820.5)"
+          id="bbd"
+          name="bbd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 871.5)"
+          id="bdd"
+          name="bdd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 921.5)"
+          id="ccd"
+          name="ccd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 972.5)"
+          id="cad"
+          name="cad"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 1022.5)"
+          id="cbc"
+          name="cbc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 1073.5)"
+          id="cdb"
+          name="cdb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1891.5 1123.5)"
+          id="cfa"
+          name="cfa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 567.5)"
+          id="ada"
+          name="ada"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 618.5)"
+          id="adb"
+          name="adb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 669.5)"
+          id="adc"
+          name="adc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 719.5)"
+          id="add"
+          name="add"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 770.5)"
+          id="bce"
+          name="bce"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 820.5)"
+          id="baf"
+          name="baf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 871.5)"
+          id="bbf"
+          name="bbf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 921.5)"
+          id="caf"
+          name="caf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 972.5)"
+          id="cbe"
+          name="cbe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 1022.5)"
+          id="cdd"
+          name="cdd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 1073.5)"
+          id="dec"
+          name="dec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 1123.5)"
+          id="deb"
+          name="deb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1982.5 1174.5)"
+          id="dea"
+          name="dea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 593.5)"
+          id="aga"
+          name="aga"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 643.5)"
+          id="ffb"
+          name="ffb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 694.5)"
+          id="fdc"
+          name="fdc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 744.5)"
+          id="fbd"
+          name="fbd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 795.5)"
+          id="fae"
+          name="fae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 845.5)"
+          id="fce"
+          name="fce"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 896.5)"
+          id="ebe"
+          name="ebe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 946.5)"
+          id="eae"
+          name="eae"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 997.5)"
+          id="ecd"
+          name="ecd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 1047.5)"
+          id="eec"
+          name="eec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 1098.5)"
+          id="dfb"
+          name="dfb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2208.5 1148.5)"
+          id="dfa"
+          name="dfa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 568.5)"
+          id="aea"
+          name="aea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 618.5)"
+          id="aeb"
+          name="aeb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 669.5)"
+          id="aec"
+          name="aec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 719.5)"
+          id="fdd"
+          name="fdd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 770.5)"
+          id="fbe"
+          name="fbe"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 820.5)"
+          id="faf"
+          name="faf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 871.5)"
+          id="ebf"
+          name="ebf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 921.5)"
+          id="eaf"
+          name="eaf"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 972.5)"
+          id="ece"
+          name="ece"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 1022.5)"
+          id="ddd"
+          name="ddd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 1073.5)"
+          id="ddc"
+          name="ddc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 1123.5)"
+          id="ddb"
+          name="ddb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2163.5 1174.5)"
+          id="dda"
+          name="dda"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 618.5)"
+          id="ffa"
+          name="ffa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 669.5)"
+          id="fdb"
+          name="fdb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 719.5)"
+          id="fbc"
+          name="fbc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 770.5)"
+          id="fad"
+          name="fad"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 820.5)"
+          id="fcd"
+          name="fcd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 871.5)"
+          id="edd"
+          name="edd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 921.5)"
+          id="ebd"
+          name="ebd"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 972.5)"
+          id="ead"
+          name="ead"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 1022.5)"
+          id="ecc"
+          name="ecc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 1073.5)"
+          id="eeb"
+          name="eeb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2253.5 1123.5)"
+          id="ega"
+          name="ega"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 668.5)"
+          id="bca"
+          name="bca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 719.5)"
+          id="bab"
+          name="bab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 769.5)"
+          id="bbb"
+          name="bbb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 820.5)"
+          id="bdb"
+          name="bdb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 870.5)"
+          id="bfb"
+          name="bfb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 921.5)"
+          id="ceb"
+          name="ceb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.5 12.75 0 45.2502 0 58.0001 25.5 45.2502 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 971.5)"
+          id="ccb"
+          name="ccb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 1022.5)"
+          id="cab"
+          name="cab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 45.2502 0 58.0001 25.4999 45.2502 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1800.5 1072.5)"
+          id="cba"
+          name="cba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 694.5)"
+          id="o6"
+          name="o6"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 744.5)"
+          id="bba"
+          name="bba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 795.5)"
+          id="bda"
+          name="bda"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 845.5)"
+          id="bfa"
+          name="bfa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 896.5)"
+          id="cga"
+          name="cga"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 946.5)"
+          id="cea"
+          name="cea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 997.5)"
+          id="cca"
+          name="cca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1755.5 1047.5)"
+          id="o5"
+          name="o5"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 643.5)"
+          id="bea"
+          name="bea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 694.5)"
+          id="bcb"
+          name="bcb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 744.5)"
+          id="bac"
+          name="bac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 795.5)"
+          id="bbc"
+          name="bbc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 845.5)"
+          id="bdc"
+          name="bdc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 896.5)"
+          id="cec"
+          name="cec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 946.5)"
+          id="ccc"
+          name="ccc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 997.5)"
+          id="cac"
+          name="cac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 1047.5)"
+          id="cbb"
+          name="cbb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.5 0 45.5001 0 58.0001 25 45.5001 49.9998 12.5 49.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 1846.5 1098.5)"
+          id="cda"
+          name="cda"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 669.5)"
+          id="fba"
+          name="fba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 719.5)"
+          id="fab"
+          name="fab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 770.5)"
+          id="fcb"
+          name="fcb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 820.5)"
+          id="feb"
+          name="feb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 871.5)"
+          id="efb"
+          name="efb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 921.5)"
+          id="edb"
+          name="edb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 972.5)"
+          id="ebb"
+          name="ebb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 1022.5)"
+          id="eab"
+          name="eab"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2344.5 1073.5)"
+          id="eca"
+          name="eca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 643.5)"
+          id="fda"
+          name="fda"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 694.5)"
+          id="fbb"
+          name="fbb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 744.5)"
+          id="fac"
+          name="fac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 795.5)"
+          id="fcc"
+          name="fcc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9999 12.75 50.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 845.5)"
+          id="fec"
+          name="fec"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 896.5)"
+          id="edc"
+          name="edc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9998 12.75 50.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 946.5)"
+          id="ebc"
+          name="ebc"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 997.5)"
+          id="eac"
+          name="eac"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4999 12.75 0 46.2498 0 58.9998 25.4999 46.2498 50.9998 12.75 50.9998Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 1047.5)"
+          id="ecb"
+          name="ecb"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.0001 12.5 0 46.4997 0 58.9998 25.0001 46.4997 50.0002 12.5 50.0002Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2299.5 1098.5)"
+          id="eea"
+          name="eea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 694.5)"
+          id="o2"
+          name="o2"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 744.5)"
+          id="fca"
+          name="fca"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 795.5)"
+          id="fea"
+          name="fea"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 845.5)"
+          id="fga"
+          name="fga"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 896.5)"
+          id="efa"
+          name="efa"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 946.5)"
+          id="eda"
+          name="eda"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25 12.4999 0 45.4998 0 57.9997 25 45.4998 49.9999 12.4999 49.9999Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 997.5)"
+          id="eba"
+          name="eba"
+          onclick="colorFill(this.id)"
+        />
+        <path
+          d="M0 25.4998 12.7499 0 45.2499 0 57.9997 25.4998 45.2499 50.9996 12.7499 50.9996Z"
+          stroke="#000000"
+          stroke-width="6.875"
+          stroke-miterlimit="8"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+          transform="matrix(-1 0 0 1 2389.5 1047.5)"
+          id="o3"
+          name="o3"
+          onclick="colorFill(this.id)"
+        />
+      </g>
+    </svg>
 
     <footer class="footer mt-auto py-3 bg-body-tertiary">
       <div class="container">
@@ -2130,7 +2239,20 @@
           class="button-container"
           style="display: flex; flex-direction: row; justify-content: end"
         >
-          <button name="color" hidden>ITEM</button>
+          <button
+            name="color"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            hidden
+          >
+            ITEM
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider" /></li>
+          </ul>
           <button
             style="color: #a72629"
             onclick="changeColor(this.value);"
@@ -2249,7 +2371,7 @@
             ■
           </button>
           <button id="arrow-button" class="arrow-btn" onclick="show();">
-            <a>◂</a>
+            <a id="arrow">◂</a>
             <a style="color: #9d55e8" id="changeColor" value="#9d55e8">■</a>
           </button>
         </div>
@@ -2257,14 +2379,3 @@
     </footer>
   </body>
 </html>
-
-<!--
-
-#9D55E8 - PURPLE #673596 AA
-#F07EAD - PINK #9D4D78 BA
-#02E269 - GREEN #099249 CA
-#01A8F6 - BLUE #0070A1 DA
-#FFD902 - YELLOW #A18E01 EA
-#F84444 - RED #A72629 FA
-
--->
