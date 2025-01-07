@@ -3,6 +3,7 @@ let toggle = false;
 function changeColor(color) {
   document.getElementById("changeColor").style.color = color;
   document.getElementById("changeColor").setAttribute("value", color);
+  document.getElementById("changeColor").innerHTML = "■";
 }
 
 function show() {
@@ -26,7 +27,10 @@ function show() {
 function colorFill(id) {
   document
     .getElementById(id)
-    .setAttribute("fill", document.getElementById("changeColor").style.color);
+    .setAttribute(
+      "fill",
+      document.getElementById("changeColor").getAttribute("value")
+    );
   let change = document.getElementsByName(id);
   for (let i = 0; i < change.length; i++) {
     document.getElementsByName(id)[i].value = document
