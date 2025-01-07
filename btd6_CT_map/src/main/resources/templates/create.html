@@ -12,6 +12,20 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- TODO : value 값 정하기  -->
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      function changeItem(color) {
+        var baseUrl = /*[[@{/img/}]]*/ "/img/";
+        document.getElementById("changeColor").innerHTML =
+          '<img src="' +
+          baseUrl +
+          color +
+          '.webp" width="24px" height="24px" />';
+        document.getElementById("changeColor").setAttribute("value", color);
+      }
+      /*]]>*/
+    </script>
     <title>Create BTD6 CT Map</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script src="/js/script.js"></script>
@@ -201,6 +215,632 @@
       xml:space="preserve"
       overflow="hidden"
     >
+      <defs>
+        <pattern
+          id="Abilitized"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Abilitized.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="AirAndSea"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/AirAndSea.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="AlchemistTouch"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/AlchemistTouch.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="BiggerBloonSabotage"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/BiggerBloonSabotage.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="BoxOfChocolates"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/BoxOfChocolates.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="BoxOfMonkey"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/BoxOfMonkey.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="BrokenHeart"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/BrokenHeart.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="CamoFlogged"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/CamoFlogged.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="CamoTrap"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/CamoTrap.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="DeepHeat"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/DeepHeat.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="DurableShots"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/DurableShots.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="ElDorado"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/ElDorado.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="ExtraEmpowered"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/ExtraEmpowered.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="FlintTips"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/FlintTips.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Fortifried"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Fortifried.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="GlueTrap"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/GlueTrap.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="GoingTheDistance"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/GoingTheDistance.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="HardBaked"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/HardBaked.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Heartless"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Heartless.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="HeroBoost"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/HeroBoost.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MagicMonkeys"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MagicMonkeys.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="ManaBulwark"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/ManaBulwark.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MarchingBoots"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MarchingBoots.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MilitaryMonkeys"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MilitaryMonkeys.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MoabClash"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MoabClash.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MoabMine"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MoabMine.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MonkeyBoost"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MonkeyBoost.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="MonkeyTycoon"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/MonkeyTycoon.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Regeneration"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Regeneration.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Restoration"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Restoration.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="RoadSpikes"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/RoadSpikes.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="RoundingUp"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/RoundingUp.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="RoyalTreatment"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/RoyalTreatment.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Sharpslosion"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Sharpslosion.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Sms"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Sms.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="StartingStash"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/StartingStash.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="SupportSimians"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/SupportSimians.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Techbot"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Techbot.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+        <pattern
+          id="Thrive"
+          patternUnits="objectBoundingBox"
+          width="1"
+          height="1"
+          patternContentUnits="userSpaceOnUse"
+          patternTransform="translate(0, 0)"
+        >
+          <image
+            xlink:href="http://localhost/img/Thrive.webp"
+            x="8"
+            y="5"
+            width="40"
+            height="40"
+          />
+        </pattern>
+      </defs>
       <g transform="translate(-1693 -514)">
         <path
           d="M0 25.0001 12.5 0 45.5001 0 58.0001 25.0001 45.5001 50.0002 12.5 50.0002Z"
@@ -2248,9 +2888,400 @@
             ITEM
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Abilitized'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Abilitized.webp}" />
+                <a>&emsp14;Abilitized</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='AirAndSea'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/AirAndSea.webp}" />
+                <a>&emsp14;AirAndSea</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='AlchemistTouch'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/AlchemistTouch.webp}" />
+                <a>&emsp14;AlchemistTouch</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='BiggerBloonSabotage'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img
+                  class="resizeImg"
+                  th:src="@{/img/BiggerBloonSabotage.webp}"
+                />
+                <a>&emsp14;BiggerBloonSabotage</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='BoxOfChocolates'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/BoxOfChocolates.webp}" />
+                <a>&emsp14;BoxOfChocolates</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='BoxOfMonkey'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/BoxOfMonkey.webp}" />
+                <a>&emsp14;BoxOfMonkey</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='BrokenHeart'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/BrokenHeart.webp}" />
+                <a>&emsp14;BrokenHeart</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='CamoFlogged'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/CamoFlogged.webp}" />
+                <a>&emsp14;CamoFlogged</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='CamoTrap'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/CamoTrap.webp}" />
+                <a>&emsp14;CamoTrap</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='DeepHeat'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/DeepHeat.webp}" />
+                <a>&emsp14;DeepHeat</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='DurableShots'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/DurableShots.webp}" />
+                <a>&emsp14;DurableShots</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='ElDorado'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/ElDorado.webp}" />
+                <a>&emsp14;ElDorado</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='ExtraEmpowered'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/ExtraEmpowered.webp}" />
+                <a>&emsp14;ExtraEmpowered</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='FlintTips'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/FlintTips.webp}" />
+                <a>&emsp14;FlintTips</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Fortifried'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Fortifried.webp}" />
+                <a>&emsp14;Fortifried</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='GlueTrap'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/GlueTrap.webp}" />
+                <a>&emsp14;GlueTrap</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='GoingTheDistance'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/GoingTheDistance.webp}" />
+                <a>&emsp14;GoingTheDistance</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='HardBaked'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/HardBaked.webp}" />
+                <a>&emsp14;HardBaked</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Heartless'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Heartless.webp}" />
+                <a>&emsp14;Heartless</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='HeroBoost'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/HeroBoost.webp}" />
+                <a>&emsp14;HeroBoost</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MagicMonkeys'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MagicMonkeys.webp}" />
+                <a>&emsp14;MagicMonkeys</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='ManaBulwark'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/ManaBulwark.webp}" />
+                <a>&emsp14;ManaBulwark</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MarchingBoots'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MarchingBoots.webp}" />
+                <a>&emsp14;MarchingBoots</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MilitaryMonkeys'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MilitaryMonkeys.webp}" />
+                <a>&emsp14;MilitaryMonkeys</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MoabClash'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MoabClash.webp}" />
+                <a>&emsp14;MoabClash</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MoabMine'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MoabMine.webp}" />
+                <a>&emsp14;MoabMine</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MonkeyBoost'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MonkeyBoost.webp}" />
+                <a>&emsp14;MonkeyBoost</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='MonkeyTycoon'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/MonkeyTycoon.webp}" />
+                <a>&emsp14;MonkeyTycoon</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Regeneration'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Regeneration.webp}" />
+                <a>&emsp14;Regeneration</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Restoration'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Restoration.webp}" />
+                <a>&emsp14;Restoration</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='RoadSpikes'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/RoadSpikes.webp}" />
+                <a>&emsp14;RoadSpikes</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='RoundingUp'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/RoundingUp.webp}" />
+                <a>&emsp14;RoundingUp</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='RoyalTreatment'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/RoyalTreatment.webp}" />
+                <a>&emsp14;RoyalTreatment</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Sharpslosion'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Sharpslosion.webp}" />
+                <a>&emsp14;Sharpslosion</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Sms'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Sms.webp}" />
+                <a>&emsp14;Sms</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='StartingStash'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/StartingStash.webp}" />
+                <a>&emsp14;StartingStash</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='SupportSimians'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/SupportSimians.webp}" />
+                <a>&emsp14;SupportSimians</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Techbot'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Techbot.webp}" />
+                <a>&emsp14;Techbot</a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="dropdown-item"
+                th:attr="data-value='Thrive'"
+                onclick="changeItem(this.getAttribute('data-value'));"
+              >
+                <img class="resizeImg" th:src="@{/img/Thrive.webp}" />
+                <a>&emsp14;Thrive</a>
+              </div>
+            </li>
+
             <li><hr class="dropdown-divider" /></li>
           </ul>
           <button

@@ -17,3 +17,11 @@ header {
   width: 100%;
   text-align: right;
 }
+ul {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.resizeImg {
+  height: 36px;
+  width: auto;
+}

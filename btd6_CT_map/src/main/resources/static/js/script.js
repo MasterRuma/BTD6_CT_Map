@@ -3,7 +3,6 @@ let toggle = false;
 function changeColor(color) {
   document.getElementById("changeColor").style.color = color;
   document.getElementById("changeColor").setAttribute("value", color);
-  document.getElementById("arrow").innerHTML;
 }
 
 function show() {
@@ -34,6 +33,4 @@ function colorFill(id) {
       .getElementById("changeColor")
       .getAttribute("value");
   }
-
-  function changeItem() {}
 }
